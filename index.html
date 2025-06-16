@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dalila Bellorin | Cabeleireira Profissional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .dancing-font {
+            font-family: 'Dancing Script', cursive;
+        }
+        .montserrat {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(255,240,245,0.9) 0%, rgba(255,255,255,0.9) 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .instagram-feed {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 8px;
+        }
+        @media (min-width: 768px) {
+            .instagram-feed {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body class="montserrat bg-rose-50 text-gray-700">
+    <!-- WhatsApp Floating Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/5541995225273?text=Olá,%20gostaria%20de%20agendar%20um%20horário%20com%20a%20Dalila%20✂️✨" 
+           class="bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg transition-all duration-300 flex items-center justify-center w-16 h-16 md:w-20 md:h-20">
+            <i class="fab fa-whatsapp text-2xl md:text-3xl"></i>
+        </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="dancing-font text-2xl md:text-3xl font-bold text-rose-600">
+                Dalila Bellorin
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-rose-600 transition">Início</a>
+                <a href="#about" class="hover:text-rose-600 transition">Sobre</a>
+                <a href="#services" class="hover:text-rose-600 transition">Serviços</a>
+                <a href="#portfolio" class="hover:text-rose-600 transition">Portfólio</a>
+                <a href="#contact" class="hover:text-rose-600 transition">Contato</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-rose-600 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="#home" class="block py-2 hover:text-rose-600 transition">Início</a>
+            <a href="#about" class="block py-2 hover:text-rose-600 transition">Sobre</a>
+            <a href="#services" class="block py-2 hover:text-rose-600 transition">Serviços</a>
+            <a href="#portfolio" class="block py-2 hover:text-rose-600 transition">Portfólio</a>
+            <a href="#contact" class="block py-2 hover:text-rose-600 transition">Contato</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient py-20 md:py-32 relative overflow-hidden">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="dancing-font text-4xl md:text-6xl font-bold text-rose-700 mb-4">
+                    Transformações com técnica e paixão
+                </h1>
+                <p class="text-lg md:text-xl text-gray-600 mb-8">
+                    Há mais de 20 anos cuidando de cada detalhe do seu cabelo.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="https://wa.me/5541995225273?text=Olá,%20gostaria%20de%20agendar%20um%20horário%20com%20a%20Dalila%20✂️✨" 
+                       class="bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-full text-center transition duration-300 flex items-center justify-center">
+                        <i class="fas fa-calendar-alt mr-2"></i> Agendar Horário
+                    </a>
+                    <a href="#services" class="border border-rose-600 text-rose-600 hover:bg-rose-50 px-6 py-3 rounded-full text-center transition duration-300">
+                        Conheça nossos serviços
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="w-64 h-64 md:w-80 md:h-80 bg-rose-200 rounded-full overflow-hidden shadow-xl">
+                        <!-- Placeholder for stylist image -->
+                        <div class="w-full h-full bg-gradient-to-br from-rose-200 to-rose-300 flex items-center justify-center">
+                            <i class="fas fa-user-tie text-rose-500 text-6xl md:text-8xl"></i>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-lg">
+                        <p class="dancing-font text-2xl text-rose-600">Dalila Bellorin</p>
+                        <p class="text-sm text-gray-500">Cabeleireira Profissional</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="dancing-font text-3xl md:text-4xl font-bold text-rose-700 mb-2">Minha História</h2>
+                <div class="w-20 h-1 bg-rose-400 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <div class="w-64 h-64 rounded-full overflow-hidden shadow-lg">
+                        <!-- Placeholder for about image -->
+                        <div class="w-full h-full bg-gradient-to-br from-rose-100 to-rose-200 flex items-center justify-center">
+                            <i class="fas fa-heart text-rose-400 text-6xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <p class="text-lg mb-6">
+                        ✨ Especialista em Penteados, Cortes & Coloração 💇‍♀️ Transformações com técnica e paixão!
+                    </p>
+                    <p class="mb-4">
+                        Dalila é uma cabeleireira apaixonada pela profissão, com mais de 20 anos de experiência. Nascida na Venezuela, atuou em salões renomados em sua cidade natal e também em Trinidad e Tobago.
+                    </p>
+                    <p class="mb-4">
+                        Desde 2019, vive no Brasil, atendendo em Curitiba. Sempre em busca de aperfeiçoamento, investe constantemente em cursos e especializações para oferecer as melhores técnicas e resultados às suas clientes.
+                    </p>
+                    <div class="mt-8">
+                        <a href="#services" class="inline-block bg-rose-600 hover:bg-rose-700 text-white px-6 py-3 rounded-full transition duration-300">
+                            Ver serviços oferecidos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 md:py-24 bg-rose-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="dancing-font text-3xl md:text-4xl font-bold text-rose-700 mb-2">Nossos Serviços</h2>
+                <div class="w-20 h-1 bg-rose-400 mx-auto"></div>
+                <p class="mt-4 max-w-2xl mx-auto">Oferecemos uma variedade de serviços profissionais para deixar seu cabelo incrível</p>
+            </div>
+            
+            <!-- Service Categories -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Penteados -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-rose-100 to-rose-200 flex items-center justify-center">
+                        <i class="fas fa-spa text-rose-500 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="dancing-font text-2xl text-rose-700 mb-4">Penteados</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rose-500 mt-1 mr-2"></i>
+                                <span>Penteado Semi-preso</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rose-500 mt-1 mr-2"></i>
+                                <span>Coque alto</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rose-500 mt-1 mr-2"></i>
+                                <span>Coque baixo</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rose-500 mt-1 mr-2"></i>
+                                <span>Penteados para formatura</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rose-500 mt-1 mr-2"></i>
+                                <span>Penteados para noivas</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Tratamentos e Química -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-rose-100 to-rose-200 flex items-center justify-center">
+                        <i class="fas fa-flask text-rose-500 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="dancing-font text-2xl text-rose-700 mb-4">Tratamentos e Química</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rose-500 mt-1 mr-2"></i>
+                                <span>Hidratação capilar</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rose-500 mt-1 mr-2"></i>
+                                <span>Escova modeladora</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rose-500 mt-1 mr-2"></i>
+                                <span>Coloração (tintura)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rose-500 mt-1 mr-2"></i>
+                                <span>Mechas e luzes</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rose-500 mt-1 mr-2"></i>
+                                <span>Tonalização</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rose-500 mt-1 mr-2"></i>
+                                <span>Reconstrução capilar</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Cortes -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden service-card transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-rose-100 to-rose-200 flex items-center justify-center">
+                        <i class="fas fa-cut text-rose-500 text-6xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="dancing-font text-2xl text-rose-700 mb-4">Cortes</h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rose-500 mt-1 mr-2"></i>
+                                <span>Corte feminino</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rose-500 mt-1 mr-2"></i>
+                                <span>Corte moderno</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rose-500 mt-1 mr-2"></i>
+                                <span>Corte repicado</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-rose-500 mt-1 mr-2"></i>
+                                <span>Corte reto</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://wa.me/5541995225273?text=Olá,%20gostaria%20de%20agendar%20um%20horário%20com%20a%20Dalila%20✂️✨" 
+                   class="inline-block bg-rose-600 hover:bg-rose-700 text-white px-8 py-3 rounded-full transition duration-300">
+                    <i class="fas fa-calendar-alt mr-2"></i> Agendar Horário
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="dancing-font text-3xl md:text-4xl font-bold text-rose-700 mb-2">Depoimentos</h2>
+                <div class="w-20 h-1 bg-rose-400 mx-auto"></div>
+                <p class="mt-4 max-w-2xl mx-auto">O que nossas clientes dizem sobre nossos serviços</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-rose-50 rounded-xl p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-rose-200 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-rose-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Ana Carolina</h4>
+                            <div class="flex text-amber-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "A Dalila transformou meu cabelo completamente! Sua técnica com mechas é incrível e o atendimento é super atencioso. Recomendo muito!"
+                    </p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-rose-50 rounded-xl p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-rose-200 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-rose-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Juliana Mendes</h4>
+                            <div class="flex text-amber-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "Fiz meu penteado de noiva com a Dalila e foi perfeito! Ela entendeu exatamente o que eu queria e fez um trabalho impecável. Super profissional!"
+                    </p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-rose-50 rounded-xl p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-rose-200 flex items-center justify-center mr-4">
+                            <i class="fas fa-user text-rose-600"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Patrícia Silva</h4>
+                            <div class="flex text-amber-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "Sou cliente da Dalila há 2 anos e nunca fiquei insatisfeita. Ela sempre sabe indicar o melhor tratamento para o meu cabelo e os resultados são sempre ótimos."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio/Instagram Section -->
+    <section id="portfolio" class="py-16 md:py-24 bg-rose-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="dancing-font text-3xl md:text-4xl font-bold text-rose-700 mb-2">Nosso Portfólio</h2>
+                <div class="w-20 h-1 bg-rose-400 mx-auto"></div>
+                <p class="mt-4 max-w-2xl mx-auto">Alguns dos nossos trabalhos recentes</p>
+                <a href="https://instagram.com/dalilabellorin" target="_blank" class="inline-block mt-4 text-rose-600 hover:text-rose-800 transition">
+                    <i class="fab fa-instagram mr-2"></i> Siga-nos no Instagram @dalilabellorin
+                </a>
+            </div>
+            
+            <!-- Instagram Feed Placeholder -->
+            <div class="instagram-feed">
+                <!-- These would be replaced with actual Instagram feed images -->
+                <div class="bg-gradient-to-br from-rose-100 to-rose-200 aspect-square rounded-lg overflow-hidden flex items-center justify-center">
+                    <i class="fas fa-spa text-rose-500 text-4xl"></i>
+                </div>
+                <div class="bg-gradient-to-br from-rose-200 to-rose-300 aspect-square rounded-lg overflow-hidden flex items-center justify-center">
+                    <i class="fas fa-cut text-rose-500 text-4xl"></i>
+                </div>
+                <div class="bg-gradient-to-br from-rose-100 to-pink-200 aspect-square rounded-lg overflow-hidden flex items-center justify-center">
+                    <i class="fas fa-hair-extensions text-rose-500 text-4xl"></i>
+                </div>
+                <div class="bg-gradient-to-br from-pink-100 to-rose-200 aspect-square rounded-lg overflow-hidden flex items-center justify-center">
+                    <i class="fas fa-spray-can text-rose-500 text-4xl"></i>
+                </div>
+                <div class="bg-gradient-to-br from-rose-200 to-pink-300 aspect-square rounded-lg overflow-hidden flex items-center justify-center">
+                    <i class="fas fa-brush text-rose-500 text-4xl"></i>
+                </div>
+                <div class="bg-gradient-to-br from-pink-200 to-rose-300 aspect-square rounded-lg overflow-hidden flex items-center justify-center">
+                    <i class="fas fa-magic text-rose-500 text-4xl"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="dancing-font text-3xl md:text-4xl font-bold text-rose-700 mb-2">Entre em Contato</h2>
+                <div class="w-20 h-1 bg-rose-400 mx-auto"></div>
+                <p class="mt-4 max-w-2xl mx-auto">Agende seu horário ou tire suas dúvidas</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-xl font-semibold text-rose-700 mb-4">Informações de Contato</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-rose-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-rose-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Endereço</h4>
+                                <p class="text-gray-600">R. Ubaldino do Amaral, 458 – Salão Marly, Alto da XV, Curitiba – PR</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-rose-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-rose-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Telefone/WhatsApp</h4>
+                                <p class="text-gray-600">+55 41 99522-5273</p>
+                                <a href="https://wa.me/5541995225273?text=Olá,%20gostaria%20de%20agendar%20um%20horário%20com%20a%20Dalila%20✂️✨" 
+                                   class="inline-block mt-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full text-sm transition">
+                                    <i class="fab fa-whatsapp mr-1"></i> Enviar mensagem
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-rose-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-clock text-rose-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Horário de Atendimento</h4>
+                                <p class="text-gray-600">Segunda a Sexta: 9h às 19h</p>
+                                <p class="text-gray-600">Sábado: 9h às 15h</p>
+                                <p class="text-gray-600">Atendimento com hora marcada</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-rose-100 p-3 rounded-full mr-4">
+                                <i class="fab fa-instagram text-rose-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">Redes Sociais</h4>
+                                <a href="https://instagram.com/dalilabellorin" target="_blank" class="text-rose-600 hover:text-rose-800 transition">
+                                    <i class="fab fa-instagram mr-1"></i> @dalilabellorin
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold text-rose-700 mb-4">Localização</h3>
+                    <div class="bg-gray-100 rounded-lg overflow-hidden h-64">
+                        <!-- Google Maps Embed -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.305144439456!2d-49.27782292437013!3d-25.45907723336696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce472f8f33f09%3A0x6e7a1b7e3a4e3b1f!2sR.%20Ubaldino%20do%20Amaral%2C%20458%20-%20Alto%20da%20XV%2C%20Curitiba%20-%20PR%2C%2080045-070!5e0!3m2!1sen!2sbr!4v1689876543210!5m2!1sen!2sbr" 
+                                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-rose-700 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="dancing-font text-2xl font-bold mb-2">Dalila Bellorin</div>
+                    <p class="text-rose-100">Cabeleireira Profissional</p>
+                </div>
+                
+                <div class="flex space-x-6 mb-4 md:mb-0">
+                    <a href="https://instagram.com/dalilabellorin" target="_blank" class="text-white hover:text-rose-200 transition">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="https://wa.me/5541995225273?text=Olá,%20gostaria%20de%20agendar%20um%20horário%20com%20a%20Dalila%20✂️✨" 
+                       class="text-white hover:text-rose-200 transition">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </a>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <p class="text-rose-100">© 2023 Dalila Bellorin. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    mobileMenu.classList.add('hidden');
+                    
+                    // Scroll to target
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
